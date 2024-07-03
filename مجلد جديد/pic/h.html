@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src=
+"https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js">
+    </script>
+    <meta name="viewport" 
+          content="width=device-width, 
+                   initial-scale=1.0">
+    <script>
+        function Click() {
+            $(document).ready(function () {
+                $('head').find('link').remove();
+            });
+        }
+    </script>
+</head>
+
+<body>
+    <h1 style="color:green">
+        GeeksforGeeks
+    </h1>
+    <h3>Normalize.css</h3>
+    <p>
+        Welcome to GeeksforGeeks
+    </p>
+    <button onclick="myFunction()">
+        Click Me to Add
+    </button>
+    <button onclick="Click()">
+        Click Me to Remove
+    </button>
+
+    <script>
+        function myFunction() {
+            var head = document.getElementsByTagName('HEAD')[0];
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 
+"https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css";
+
+            // Append link element to HTML head
+            head.appendChild(link);
+        }
+    </script>
+</body>
+
+</html>
